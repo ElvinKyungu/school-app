@@ -1,4 +1,17 @@
-<script setup>
+<script >
+    export default {
+  data() {
+    
+  },methods: {
+    toggleFunction() {
+        let menu = document.getElementById("menu-btn");
+        let navbar = document.querySelector('.header .navbar');
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+
+    }
+  },
+}
 </script>
 
 <template>
@@ -6,21 +19,22 @@
 
         <a href="home.html" class="logo"> E-learning </a>
 
-        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="menu-btn" @click="toggleFunction" class="fas fa-bars"></div>
 
         <nav class="navbar">
             <ul>
-                <li><a href="">Accueil</a></li>
-                <li><a href="">A propos</a></li>
-                <li><a href="#">cours +</a>
+                <li><router-link to="../">Accueil</router-link></li>
+                <li><router-link to="../About">A propos</router-link></li>
+                <li><router-link to="">Cours +</router-link>
                     <ul>
-                        <li><a href="">cours 01</a></li>
-                        <li><a href="">cours 02</a></li>
-                        <li><a href="">cours 03</a></li>
+                        <li><router-link to="../Cours">Cours 01</router-link></li>
+                        <li><router-link to="../Cours">Cours 02</router-link></li>
+                        <li><router-link to="../Cours">Cours 03</router-link></li>
                     </ul>
                 </li>
-                <li><a href="">connexion</a></li>
-                <li><a href="">contact</a></li>
+                
+                <li><router-link to="../Connexion">Connexion</router-link></li>
+                <li><router-link to="../Contact">Contact</router-link></li>
             </ul>
         </nav>
     </header>  

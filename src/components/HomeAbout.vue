@@ -6,8 +6,23 @@
 
         <div class="content">
             <h3>votre parcours vers le succès.</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa cumque neque quam amet perferendis sed rem ut tenetur porro praesentium.</p>
-            <a href="#" class="btn">Commencer</a>
+            <p>Apprenez à apprendre, découvrez les compétences de demain. Et prenez votre carrière en main.</p>
+            <router-link to="../Satrted" class="btn">Commencer</router-link>
         </div>
     </section>
 </template>
+<script>
+export default {
+    data() {
+        return {
+           
+        }
+    },
+    methods: {
+       
+    },
+    mounted() {
+        console.log('Home mounted')
+    }
+}
+</script>
