@@ -11,10 +11,10 @@
 
 
     git init
-    git checkout -b gh-pages
+    git checkout -b main
     git add -A
     git commit -m 'deploy'
 
-    git push -f git@github.com:ljoboy/school-app.git main:gh-pages
+    git push -f git@github.com:ljoboy/school-app.git gh-pages:main
 
     cd -
