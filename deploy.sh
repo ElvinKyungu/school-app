@@ -20,4 +20,3 @@
     git push -f git@github.com:ElvinKyungu/school-app.git main:gh-pages
 
     cd -
-
