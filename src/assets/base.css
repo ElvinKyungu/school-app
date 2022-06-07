@@ -24,7 +24,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #224bcf;
+  background-color: #7451eb;
   border-radius: .5rem;
 }
 
@@ -41,7 +41,7 @@ section {
   margin-top: 1rem;
   padding: 1rem 3rem;
   background: #e9edfb;
-  color: #224bcf;
+  color: #7451eb;
   cursor: pointer;
   border-radius: .5rem;
   font-size: 1.7rem;
@@ -49,7 +49,7 @@ section {
 
 .btn:hover {
   color: #fff;
-  background: #224bcf;
+  background: #7451eb;
 }
 
 .heading {
@@ -75,7 +75,7 @@ section {
 }
 
 .heading p a:hover {
-  color: #224bcf;
+  color: #7451eb;
 }
 
 .header {
@@ -132,14 +132,14 @@ section {
 
 .header .navbar ul li a:hover {
   background: #fff;
-  color: #224bcf;
+  color: #7451eb;
 }
 
 .header .navbar ul li ul {
   position: absolute;
   left: 0;
   width: 20rem;
-  background: #224bcf;
+  background: #7451eb;
   display: none;
 }
 
@@ -612,12 +612,12 @@ section {
 }
 
 .blog .box .content .icons a:hover {
-  color: #224bcf;
+  color: #7451eb;
 }
 
 .blog .box .content .icons a i {
   padding-right: .5rem;
-  color: #224bcf;
+  color: #7451eb;
 }
 
 .blog .box .content h3 {
@@ -654,7 +654,7 @@ section {
   width: 6.5rem;
   line-height: 6.5rem;
   font-size: 2.5rem;
-  color: #224bcf;
+  color: #7451eb;
   background: #e9edfb;
   border-radius: 50%;
   text-align: center;
@@ -748,7 +748,7 @@ section {
 }
 
 .footer .box-container .box a:hover {
-  color: #2F243A;
+  color: #7451eb;
 }
 
 .footer .box-container .box a:hover i {
@@ -756,7 +756,7 @@ section {
 }
 
 .footer .box-container .box a i {
-  color: #2F243A;
+  color: #7451eb;
   padding-right: .5rem;
 }
 
@@ -795,7 +795,7 @@ section {
     top: 99%;
     left: 0;
     right: 0;
-    background: #224bcf;
+    background: #7451eb;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }

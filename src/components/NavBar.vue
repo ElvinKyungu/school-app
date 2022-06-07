@@ -17,7 +17,7 @@
 <template>
     <header class="header">
 
-        <a href="home.html" class="logo"> E-learning </a>
+        <a href="home.html" class="logo"> School-App </a>
 
         <div id="menu-btn" @click="toggleFunction" class="fas fa-bars"></div>
 
@@ -39,3 +39,6 @@
         </nav>
     </header>  
 </template>
+<style>
+
+</style>
