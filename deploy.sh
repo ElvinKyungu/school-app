@@ -17,6 +17,6 @@
     git add -A
     git commit -m 'deploy'
 
-    git push -f git@github.com:ElvinKyungu/school-app.git main:gh-pages
+    git push -f git@github.com:ljoboy/school-app.git main:gh-pages
 
     cd -
