@@ -125,34 +125,21 @@ export default {
 </script>
 <template>
     <form name="Form" @click="validateForm()" >
-        <h2>Inscrivez-vous</h2>
+        <h2>Connectez-vous</h2>
         <div class="box">
-            <label>Votre nom</label>
-            <input type="text" name="name" id="name">
-            <div class="error" id="nameErr"></div>
-        </div>
-        <div class="box">
-            <label>Votre prenom</label>
-            <input type="text" name="prenom" maxlength="10" id="prenom">
-            <div class="error" id="prenomErr"></div>
-        </div>
-        <div class="box">
-            <label>Votre e-mail</label>
+            <label>e-mail</label>
             <input type="text" name="email" id="email">
             <div class="error" id="emailErr"></div>
         </div>
         <div class="box">
-            <label>Sexe</label>
-            <div class="form-inline" id="gender">
-                <label><input type="radio" name="gender" value="male"> Homme</label>
-                <label><input type="radio" name="gender" value="female"> Femme</label> 
-            </div>
-            <div class="error" id="genderErr"></div>
+            <label>mot de passe</label>
+            <input type="text" name="prenom" maxlength="10" id="prenom">
+            <div class="error" id="passwordErr"></div>
         </div>
-            
         <div class="box">
-            <input type="submit" class="btn" value="S'inscrire">
+            <input type="submit" class="btn" value="Se connecter">
         </div>
+        <label>Vous n'avez pas de compte ? <router-link to="../Inscription">Créer maintenant</router-link> </label>
     </form>
 </template>
 <style scoped>

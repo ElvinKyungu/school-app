@@ -51,11 +51,8 @@ import Category from '../components/Category.vue';
                 <textarea name="" placeholder="Votre message" id="" cols="30" rows="10"></textarea>
                 <input type="submit" value="Envoyez" class="btn">
             </form>
-
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15076.89592087332!2d72.8319697277345!3d19.14167056419224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1635757298406!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417.8806039471235!2d27.479107580011647!3d-11.633930427134187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x197239475843a955%3A0x3f8449d49c1f87f9!2sAv.%20Kakanda%2C%20Lubumbashi!5e1!3m2!1sfr!2scd!4v1654620478067!5m2!1sfr!2scd" allowfullscreen="" loading="lazy" ></iframe>
         </div>
-
     </section>
     <Footer />
   </main>

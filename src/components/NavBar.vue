@@ -25,13 +25,7 @@
             <ul>
                 <li><router-link to="../">Accueil</router-link></li>
                 <li><router-link to="../About">A propos</router-link></li>
-                <li><router-link to="">Cours +</router-link>
-                    <ul>
-                        <li><router-link to="../Cours">Cours 01</router-link></li>
-                        <li><router-link to="../Cours">Cours 02</router-link></li>
-                        <li><router-link to="../Cours">Cours 03</router-link></li>
-                    </ul>
-                </li>
+                <li><router-link to="../Cours">Cours +</router-link></li>
                 
                 <li><router-link to="../Connexion">Connexion</router-link></li>
                 <li><router-link to="../Contact">Contact</router-link></li>
