@@ -1,44 +1,14 @@
 <script>
 export default {
   methods: {
+        printError (Id, Msg) { 
+        document.getElementById(Id).innerHTML = Msg;
+    },
     validateForm () { 
-        
-        var name = document.Form.name.value;
-        var email = document.Form.email.value;
-        var mobile = document.Form.mobile.value;
-        var country = document.Form.country.value;
-        var gender = document.Form.gender.value;
-        
-
-        var nameErr = emailErr = mobileErr = countryErr = genderErr = true;
-        
-
-        if(name == "") {
-            printError("nameErr", "Please enter your name");
-            var elem = document.getElementById("name");
-                elem.classList.add("input-2");
-                elem.classList.remove("input-1");
-        } else {
-            var regex = /^[a-zA-Z\s]+$/;                
-            if(regex.test(name) === false) {
-                printError("nameErr", "Please enter a valid name");
-                var elem = document.getElementById("name");
-                elem.classList.add("input-2");
-                elem.classList.remove("input-1");
-            } else {
-                printError("nameErr", "");
-                nameErr = false;
-                var elem = document.getElementById("name");
-                elem.classList.add("input-1");
-                elem.classList.remove("input-2");
-
-                
-            }
-        }
-        
-
+        var email = document.querySelector('.email').value;
+        var password = document.querySelector('.password').value;
         if(email == "") {
-            printError("emailErr", "Please enter your email address");
+            this.printError("emailErr", "Entrer votre adresse mail s'il vous plaît");
             var elem = document.getElementById("email");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
@@ -46,80 +16,41 @@ export default {
             
             var regex = /^\S+@\S+\.\S+$/;
             if(regex.test(email) === false) {
-                printError("emailErr", "Please enter a valid email address");
+                this.printError("emailErr", "Entrer une adresse mail valide");
                 var elem = document.getElementById("email");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
             } else{
-                printError("emailErr", "");
-                emailErr = false;
+                document.getElementById('emailErr').innerText = "Bravo !!";
+                this.printError("emailErr", "");
                 var elem = document.getElementById("email");
                 elem.classList.add("input-1");
                 elem.classList.remove("input-2");
 
             }
         }
-        
-    
-        if(mobile == "") {
-            printError("mobileErr", "Please enter your mobile number");
-            var elem = document.getElementById("mobile");
+        if(password == "") {
+            this.printError("passwordErr", "Veuillez saisir votre mot de passe");
+            var elem = document.getElementById("password");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
         } else {
-            var regex = /^[1-9]\d{9}$/;
-            if(regex.test(mobile) === false) {
-                printError("mobileErr", "Please enter a valid 10 digit mobile number");
-                var elem = document.getElementById("mobile");
+            
+            var regex =/^[a-zA-Z0-9\s]+$/;
+            if(regex.test(password) === false || password < 4) {
+                this.printError("passwordErr", "Entrer un mot de passe avec minimum 4 caractères");
+                var elem = document.getElementById("password");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
             } else{
-                printError("mobileErr", "");
-                mobileErr = false;
-                var elem = document.getElementById("mobile");
+                this.printError("passwordErr", "");
+                var elem = document.getElementById("password");
                 elem.classList.add("input-1");
                 elem.classList.remove("input-2");
             }
         }
-        
-
-        if(country == "Select") {
-            printError("countryErr", "Please select your country");
-            var elem = document.getElementById("country");
-                elem.classList.add("input-4");
-                elem.classList.remove("input-3");
-        } else {
-            printError("countryErr", "");
-            countryErr = false;
-            var elem = document.getElementById("country");
-                elem.classList.add("input-3");
-                elem.classList.remove("input-4");
-        }
-        
-
-        if(gender == "") {
-            printError("genderErr", "Please select your gender");
-            var elem = document.getElementById("gender");
-                elem.classList.add("input-4");
-                elem.classList.remove("input-3");
-        } else {
-            printError("genderErr", "");
-            genderErr = false;
-            var elem = document.getElementById("gender");
-                elem.classList.add("input-3");
-                elem.classList.remove("input-4");
-        }
-        
-        
-        if((nameErr || emailErr || mobileErr || countryErr || genderErr) == true) {
-        return false;
-        } 
-    },
-    printError (Id, Msg) { 
-        document.getElementById(Id).innerHTML = Msg;
     },
   },
-
 }
 
 </script>
@@ -127,17 +58,17 @@ export default {
     <form name="Form" @click="validateForm()" >
         <h2>Connectez-vous</h2>
         <div class="box">
-            <label>Username or Email:</label>
-            <input type="text" name="name" id="name">
-            <div class="error" id="nameErr"></div>
+            <label>Email:</label>
+            <input type="text" id="email" class="email">
+            <div class="error" id="emailErr"></div>
         </div>
         <div class="box">
             <label>Mot de passe :</label>
-            <input type="text" name="prenom" maxlength="10" id="prenom">
-            <div class="error" id="prenomErr"></div>
+            <input type="text" id="password" class="password">
+            <div class="error" id="passwordErr"></div>
         </div>
         <div class="box">
-            <input type="submit" class="btn" value="Se connecter">
+        <router-link to="" style="width: 100%; text-align: center" class="btn">Se connecter</router-link>
         </div>
         <label>Vous n'avez pas de compte ? <router-link to="../Inscription">Inscrivez-vous maintenant</router-link> </label>
     </form>

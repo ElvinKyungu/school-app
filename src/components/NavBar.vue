@@ -29,6 +29,7 @@
                 
                 <li><router-link to="../Connexion">Connexion</router-link></li>
                 <li><router-link to="../Contact">Contact</router-link></li>
+                <li><router-link to="../Dashboard">Dashboard</router-link></li>
             </ul>
         </nav>
     </header>  
