@@ -24,7 +24,7 @@
         <nav class="navbar">
             <ul>
                 <li><router-link to="../">Accueil</router-link></li>
-                <li><router-link to="../About">A propos</router-link></li>
+                <li><router-link to="../About">Archives</router-link></li>
                 <li><router-link to="../Cours">Cours +</router-link></li>
                 
                 <li><router-link to="../Connexion">Connexion</router-link></li>
