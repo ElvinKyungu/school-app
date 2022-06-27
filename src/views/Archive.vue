@@ -1,8 +1,6 @@
 <script setup>
 import NavBar from '@/components/NavBar.vue';
-
-// import Category from '../components/Category.vue';
-import Category from '../components/Category.vue';
+import listArchives from '../components/listArchives.vue';
 import Footer from '@/components/Footer.vue';
 
 </script>
@@ -10,9 +8,12 @@ import Footer from '@/components/Footer.vue';
   <main>
     <NavBar />
     <!-- categories section starts  -->
-
+    <section class="heading">
+        <h3>Liste de cours</h3>
+        <p> <router-link to="/">home >></router-link> Liste de cours </p>
+    </section>
     <section class="category">
-      <Category/>
+      <listArchives/>
     </section>
 
     <!-- categories section ends -->
