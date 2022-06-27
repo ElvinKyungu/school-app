@@ -18,9 +18,9 @@ const router = createRouter({
       component: () => import('../views/Satrted.vue')
     },
     {
-      path: '/About',
-      name: 'About',
-      component: () => import('../views/About.vue')
+      path: '/categoriesArchives',
+      name: 'categoriesArchives',
+      component: () => import('../views/categoriesArchives.vue')
     },
     {
       path: '/Connexion',
@@ -41,6 +41,11 @@ const router = createRouter({
       path: '/Cours',
       name: 'Cours',
       component: () => import('../views/Cours.vue')
+    },
+    {
+      path: '/Archive',
+      name: 'Archive',
+      component: () => import('../views/Archive.vue')
     },
     {
       path: '/Dashboard',

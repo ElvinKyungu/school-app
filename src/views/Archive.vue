@@ -1,7 +1,9 @@
 <script setup>
-import NavBar from '@/components/NavBar.vue'
-import Footer from '@/components/Footer.vue'
+import NavBar from '@/components/NavBar.vue';
+
+// import Category from '../components/Category.vue';
 import Category from '../components/Category.vue';
+import Footer from '@/components/Footer.vue';
 
 </script>
 <template>
