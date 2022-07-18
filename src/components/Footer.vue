@@ -35,7 +35,7 @@
             </div>
 
         </div>
-        <div class="credit"> Créer par <span>Elvin Kyungu front-end web Developer</span> | Tous droits réservés! </div>
+        <div class="credit"><span>CodeLab Drc</span> | Tous droits réservés! </div>
     </section>
     <!-- footer section ends -->
 </template>
