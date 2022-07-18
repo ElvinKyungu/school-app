@@ -1,102 +1,109 @@
 <script>
+import Preloader from '@/components/Preloader.vue'
+import Preloader from '../components/Preloader.vue';
 export default {
-  methods: {
-    printError (Id, Msg) { 
-        document.getElementById(Id).innerHTML = Msg;
-    },
-    validateForm () { 
-        
-        var name = document.querySelector('.name').value;
-        var email = document.querySelector('.email').value;
-        var password = document.querySelector('.password').value;
-        var password2 = document.querySelector('.password2').value;
-        console.log(name);
-    //     alert(name)
-        // var nameErr = emailErr = passwordErr = password2Err = true;
-         if(name == "") {
-            this.printError("nameErr", "Veuillez saisir le nom");
-            var elem = document.getElementById("name");
-                elem.classList.add("input-2");
-                elem.classList.remove("input-1");
-        } else {
-            var regex = /^[a-zA-Z\s]+$/;                
-            if(regex.test(name) === false || name.length <= 3) {
-                this.printError("nameErr", "Veuillez saisir le nom valide");
+    methods: {
+        printError(Id, Msg) {
+            document.getElementById(Id).innerHTML = Msg;
+        },
+        validateForm() {
+            var name = document.querySelector(".name").value;
+            var email = document.querySelector(".email").value;
+            var password = document.querySelector(".password").value;
+            var password2 = document.querySelector(".password2").value;
+            console.log(name);
+            //     alert(name)
+            // var nameErr = emailErr = passwordErr = password2Err = true;
+            if (name == "") {
+                this.printError("nameErr", "Veuillez saisir le nom");
                 var elem = document.getElementById("name");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
-            } else {
-                this.printError("nameErr", "");
-                var elem = document.getElementById("name");
-                elem.classList.add("input-1");
-                elem.classList.remove("input-2");
             }
-        }
-        if(email == "") {
-            this.printError("emailErr", "Please enter your email address");
-            var elem = document.getElementById("email");
-                elem.classList.add("input-2");
-                elem.classList.remove("input-1");
-        } else {
-            
-            var regex = /^\S+@\S+\.\S+$/;
-            if(regex.test(email) === false) {
-                this.printError("emailErr", "Entrer une adresse mail valide");
+            else {
+                var regex = /^[a-zA-Z\s]+$/;
+                if (regex.test(name) === false || name.length <= 3) {
+                    this.printError("nameErr", "Veuillez saisir le nom valide");
+                    var elem = document.getElementById("name");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+                else {
+                    this.printError("nameErr", "");
+                    var elem = document.getElementById("name");
+                    elem.classList.add("input-1");
+                    elem.classList.remove("input-2");
+                }
+            }
+            if (email == "") {
+                this.printError("emailErr", "Please enter your email address");
                 var elem = document.getElementById("email");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
-            } else{
-                document.getElementById('emailErr').innerText = "Bravo !!";
-                this.printError("emailErr", "");
-                var elem = document.getElementById("email");
-                elem.classList.add("input-1");
-                elem.classList.remove("input-2");
-
             }
-        }
-        if(password == "") {
-            this.printError("passwordErr", "Veuillez saisir votre mot de passe");
-            var elem = document.getElementById("password");
-                elem.classList.add("input-2");
-                elem.classList.remove("input-1");
-        } else {
-            
-            var regex =/^[a-zA-Z0-9\s]+$/;
-            if(regex.test(password) === false || password < 4) {
-                this.printError("passwordErr", "Entrer un mot de passe avec minimum 4 caractères");
+            else {
+                var regex = /^\S+@\S+\.\S+$/;
+                if (regex.test(email) === false) {
+                    this.printError("emailErr", "Entrer une adresse mail valide");
+                    var elem = document.getElementById("email");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+                else {
+                    document.getElementById("emailErr").innerText = "Bravo !!";
+                    this.printError("emailErr", "");
+                    var elem = document.getElementById("email");
+                    elem.classList.add("input-1");
+                    elem.classList.remove("input-2");
+                }
+            }
+            if (password == "") {
+                this.printError("passwordErr", "Veuillez saisir votre mot de passe");
                 var elem = document.getElementById("password");
                 elem.classList.add("input-2");
                 elem.classList.remove("input-1");
-            } else{
-                this.printError("passwordErr", "");
-                var elem = document.getElementById("password");
+            }
+            else {
+                var regex = /^[a-zA-Z0-9\s]+$/;
+                if (regex.test(password) === false || password < 4) {
+                    this.printError("passwordErr", "Entrer un mot de passe avec minimum 4 caractères");
+                    var elem = document.getElementById("password");
+                    elem.classList.add("input-2");
+                    elem.classList.remove("input-1");
+                }
+                else {
+                    this.printError("passwordErr", "");
+                    var elem = document.getElementById("password");
+                    elem.classList.add("input-1");
+                    elem.classList.remove("input-2");
+                }
+            }
+            if (password2 == "") {
+                this.printError("password2Err", "Veuillez saisir votre mot de passe");
+                var elem = document.getElementById("password2");
+                elem.classList.add("input-2");
+                elem.classList.remove("input-1");
+            }
+            else if (password != password2) {
+                this.printError("password2Err", "Les deux mot de passe ne correspondent pas");
+                var elem = document.getElementById("password2");
+                elem.classList.add("input-2");
+                elem.classList.remove("input-1");
+            }
+            else {
+                this.printError("password2Err", "");
+                var elem = document.getElementById("password2");
                 elem.classList.add("input-1");
                 elem.classList.remove("input-2");
             }
-        }
-        if(password2 == "") {
-            this.printError("password2Err", "Veuillez saisir votre mot de passe");
-            var elem = document.getElementById("password2");
-                elem.classList.add("input-2");
-                elem.classList.remove("input-1");
-        }else if(password != password2) {
-            this.printError("password2Err", "Les deux mot de passe ne correspondent pas");
-            var elem = document.getElementById("password2");
-            elem.classList.add("input-2");
-            elem.classList.remove("input-1");
-        }
-         else{
-            this.printError("password2Err", "");    
-            var elem = document.getElementById("password2");
-            elem.classList.add("input-1");
-            elem.classList.remove("input-2");
-        }
+        },
     },
-  },
+    components: { Preloader }
 }
 
 </script>
 <template>
+    <Preloader/>
     <form name="Form">
         <h2>Inscrivez-vous</h2>
         <div class="box">

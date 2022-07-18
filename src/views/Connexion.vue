@@ -55,6 +55,7 @@ export default {
 
 </script>
 <template>
+
     <form name="Form" @click="validateForm()" >
         <h2>Connectez-vous</h2>
         <div class="box">

@@ -1,9 +1,11 @@
 <script setup>
+import Preloader from '@/components/Preloader.vue'
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
 
 </script>
 <template>
+    <Preloader />
   <main>
     <NavBar />
     <section class="heading">
