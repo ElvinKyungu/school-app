@@ -44,7 +44,9 @@ export default {
     },
   },
   created () {
-    this.Editor()
+    setTimeout(() => {
+        this.Editor()
+    }, 3000);
   },
   components: {
     Preloader,
@@ -97,7 +99,7 @@ export default {
                 <input type="text" placeholder="Titre du cours" class="box">
   
                 <textarea name="" placeholder="Votre message" cols="30" rows="10"></textarea>
-                <input type="submit" @click="quilijs" value="Poster le cours" class="btn">
+                <input type="submit" value="Poster le cours" class="btn">
             </form>
             <div id="editor"></div>
             <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d417.8806039471235!2d27.479107580011647!3d-11.633930427134187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x197239475843a955%3A0x3f8449d49c1f87f9!2sAv.%20Kakanda%2C%20Lubumbashi!5e1!3m2!1sfr!2scd!4v1654620478067!5m2!1sfr!2scd" allowfullscreen="" loading="lazy" ></iframe> -->
